@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="jmamani_sesion03PageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="HRService" id="HRServiceIterator"/>
+    <accessorIterator MasterBinding="HRServiceIterator" Binds="allEmployees" RangeSize="25" DataControl="HRService"
+                      BeanClass="oracle.workbetter.model.Employee" id="allEmployeesIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="allEmployeesIterator" id="allEmployees">
+      <nodeDefinition DefName="oracle.workbetter.model.Employee" Name="allEmployees0">
+        <AttrNames>
+          <Item Value="firstName"/>
+          <Item Value="lastName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="allEmployeesIterator" id="allEmployees1">
+      <nodeDefinition DefName="oracle.workbetter.model.Employee" Name="allEmployees10">
+        <AttrNames>
+          <Item Value="empId"/>
+          <Item Value="firstName"/>
+          <Item Value="lastName"/>
+          <Item Value="title"/>
+          <Item Value="email"/>
+          <Item Value="mobile"/>
+          <Item Value="phone"/>
+          <Item Value="address"/>
+          <Item Value="city"/>
+          <Item Value="state"/>
+          <Item Value="country"/>
+          <Item Value="postal"/>
+          <Item Value="twitter"/>
+          <Item Value="facebook"/>
+          <Item Value="google"/>
+          <Item Value="linkedIn"/>
+          <Item Value="hireDate"/>
+          <Item Value="compRatio"/>
+          <Item Value="salary"/>
+          <Item Value="bonus"/>
+          <Item Value="commission"/>
+          <Item Value="rating"/>
+          <Item Value="potential"/>
+          <Item Value="deptId"/>
+          <Item Value="deptName"/>
+          <Item Value="mgrId"/>
+          <Item Value="mgrFirstName"/>
+          <Item Value="mgrLastName"/>
+          <Item Value="mgrImage"/>
+          <Item Value="image"/>
+          <Item Value="active"/>
+          <Item Value="tenure"/>
+          <Item Value="nboxPotential"/>
+          <Item Value="nboxRating"/>
+          <Item Value="teamAvgRating"/>
+          <Item Value="reportCount"/>
+          <Item Value="empMeetings"/>
+          <Item Value="empEvents"/>
+          <Item Value="groupSize"/>
+          <Item Value="groupAvgRating"/>
+          <Item Value="groupAvgPotential"/>
+          <Item Value="groupCompRatioAbove"/>
+          <Item Value="groupCompRatioIn"/>
+          <Item Value="groupCompRatioBelow"/>
+          <Item Value="groupMeetings"/>
+          <Item Value="groupEvents"/>
+          <Item Value="groupTrainings"/>
+          <Item Value="groupTimeOff"/>
+          <Item Value="notifyApproved"/>
+          <Item Value="notifyWaiting"/>
+          <Item Value="notifyRejected"/>
+          <Item Value="ratingDesc"/>
+          <Item Value="potentialDesc"/>
+          <Item Value="skillCount"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

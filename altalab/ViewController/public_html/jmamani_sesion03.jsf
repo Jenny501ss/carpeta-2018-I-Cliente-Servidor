@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="jmamani_sesion03.jsf" id="d1">
+    <af:messages id="m1"/>
+    <af:form id="f1">
+      <af:pageTemplate viewId="/oracle/templates/tabletFirstTemplate.jspx" id="pt1">
+        <f:facet name="header"/>
+        <f:facet name="status"/>
+        <f:facet name="appNav"/>
+        <f:facet name="globalLinks"/>
+        <f:facet name="footer"/>
+        <f:facet name="center">
+          <af:masonryLayout id="ml1">
+            <af:panelGroupLayout id="pgl2" styleClass="AFMasonryTileSize2x1 tileStyle">
+              <af:panelGroupLayout id="pgl6">
+                <af:listView value="#{bindings.allEmployees1.collectionModel}" var="item"
+                             emptyText="#{bindings.allEmployees1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                             fetchSize="#{bindings.allEmployees1.rangeSize}" id="lv2">
+                  <af:listItem id="li2">
+                    <af:panelGridLayout id="pgl7">
+                      <af:gridRow marginTop="5px" height="auto" id="gr2">
+                        <af:gridCell marginStart="5px" rowSpan="2" width="50%" id="gc3"/>
+                        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc4"/>
+                      </af:gridRow>
+                      <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">
+                        <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc5"/>
+                      </af:gridRow>
+                    </af:panelGridLayout>
+                  </af:listItem>
+                </af:listView>
+              </af:panelGroupLayout>
+            </af:panelGroupLayout>
+            <af:panelGroupLayout id="pgl3" styleClass="AFMasonryTileSize2x1 tileStyle"/>
+            <af:panelGroupLayout id="pgl4" styleClass="AFMasonryTileSize2x1 tileStyle"/>
+            <af:panelGroupLayout id="pgl5" styleClass="AFMasonryTileSize2x1 tileStyle"/>
+          </af:masonryLayout>
+        </f:facet>
+        <f:facet name="start"/>
+        <f:facet name="end"/>
+        <f:attribute name="endWidth" value="0"/>
+      </af:pageTemplate>
+      <af:listView value="#{bindings.allEmployees.collectionModel}" var="item"
+                   emptyText="#{bindings.allEmployees.viewable ? 'No data to display.' : 'Access Denied.'}"
+                   fetchSize="#{bindings.allEmployees.rangeSize}" id="lv1"
+                   selectionListener="#{bindings.allEmployees.treeModel.makeCurrent}">
+        <af:listItem id="li1">
+          <af:panelGridLayout id="pgl1">
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+              <af:gridCell marginStart="5px" width="50%" id="gc1">
+                <af:outputFormatted value="#{item.bindings.firstName.inputValue}" id="of1"/>
+              </af:gridCell>
+              <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc2">
+                <af:outputFormatted value="#{item.bindings.lastName.inputValue}" id="of2"/>
+              </af:gridCell>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </af:listItem>
+      </af:listView>
+    </af:form>
+  </af:document>
+</f:view>
