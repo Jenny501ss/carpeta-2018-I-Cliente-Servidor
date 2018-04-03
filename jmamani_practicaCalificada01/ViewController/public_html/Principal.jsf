@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Principal.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow height="50px" id="gr3">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                        <!-- Header -->
+                        <af:outputText value="UAP-Cursos" id="ot1" inlineStyle="font-size:xx-large;"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr1">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+                        <!-- Content -->
+                        <af:outputText value="DATOS" id="ot2" inlineStyle="font-size:x-large;"/>
+                        <p>
+                             
+                        </p>
+                        <af:inputText label="Nombres:" id="it1" inlineStyle="font-size:large;"/>
+                        <p>
+                             
+                        </p>
+                        <af:inputText label="Apellidos:" id="it2" inlineStyle="font-size:large;"/>
+                        <p>
+                             
+                        </p>
+                        <af:inputText label="Carrera:" id="it3" inlineStyle="font-size:x-large;"/>
+                        <p>
+                             
+                        </p>
+                        <af:button text="Departamento" id="b1" action="depa_01"/>
+                             <af:button text="Trabajo" id="b2" action="traba_01"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="50px" id="gr2">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc3">
+                        <!-- Footer -->
+                        <af:inputText label="Direccion:" id="it4" inlineStyle="font-size:x-large;"/>
+                        
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+</f:view>
