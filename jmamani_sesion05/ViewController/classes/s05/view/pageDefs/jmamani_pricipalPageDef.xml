@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="jmamani_pricipalPageDef"
+                Package="s05.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="jmamani_tf_reutilizable1" taskFlowId="/WEB-INF/jmamani_tf_reutilizable.xml#jmamani_tf_reutilizable"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="inputTitle" value="Panel derecho"/>
+      </parameters>
+    </taskFlow>
+    <taskFlow id="jmamani_tf_reutilizable2" taskFlowId="/WEB-INF/jmamani_tf_reutilizable.xml#jmamani_tf_reutilizable"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="inputTitle" value="Right Panel"/>
+      </parameters>
+    </taskFlow>
+  </executables>
+  <bindings/>
+</pageDefinition>
