@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="hr_system.model.AppModule">
+      <AppModuleConfig name="16337B6C449" DBconnection="java:comp/env/jdbc/hrconnDS" ApplicationName="hr_system.model.AppModule" DeployPlatform="LOCAL" IsLazyLoadingTrue="true" JDBCName="hrconn" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="AppModuleLocal" jbo.project="hr_system.model.Model">
+         <Database jbo.TypeMapEntries="OracleApps" jbo.SQLBuilder="Oracle" JDBCDataSource="java:comp/env/jdbc/hrconnDS"/>
+         <Security AppModuleJndiName="hr_system.model.AppModule"/>
+         <Tester FullProxyInterfaceName="hr_system.model.common.AppModule"/>
+         <Custom ns0:LastUsedConfiguration="AppModuleLocal" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>
